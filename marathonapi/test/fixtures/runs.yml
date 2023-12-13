@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  runNumber: 1
+  duration: 2023-12-12 02:55:20
+  distance: 9.99
+  calories: 1
+  averagePace: 2023-12-12 02:55:20
+  averageHR: 1
+
+two:
+  runNumber: 1
+  duration: 2023-12-12 02:55:20
+  distance: 9.99
+  calories: 1
+  averagePace: 2023-12-12 02:55:20
+  averageHR: 1

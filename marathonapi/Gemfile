@@ -11,6 +11,15 @@ gem "pg", "~> 1.1"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 
+#Auth0
+gem "auth0"
+
+#JWT
+gem "jwt"
+
+#OpenSSL
+gem "openssl"
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 

@@ -65,16 +65,20 @@ class RunsController < ApplicationController
 		begin
 			decode_token = JWT.decode(token, public_key, true, { iss: Rails.application.credentials.iss, verify_iss: true, aud: Rails.application.credentials.aud, verify_aud: true, algorithm: 'RS256' })
 			#If no rescue blocks are hit, return true
-			return true
 		rescue JWT::ExpiredSignature
 			render json: { error: 'Expired Access Token' }, status: :unauthorized
+			return false
 		rescue JWT::InvalidIssuerError
 			render json: { error: 'Invalid Issuer' }, status: :unauthorized
+			return false
 		rescue JWT::InvalidAudError
 			render json: { error: 'Invalid Audience' }, status: :unauthorized
+			return false
 		rescue StandardError => e
 			logger.error("Error: #{e.message}")
+			return false
 		end
+		return true
 	end
 
 	def valid_api_key?(api_key)

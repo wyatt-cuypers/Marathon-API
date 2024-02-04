@@ -20,6 +20,9 @@ gem "jwt"
 #OpenSSL
 gem "openssl"
 
+#Rack CORS
+gem "rack-cors"
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 
